@@ -127,5 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# project specific
 stroller_price.json
-.env
