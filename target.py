@@ -1,5 +1,7 @@
 """Logic to query the target api"""
 import os
+import requests
+import json
 
 def get_price_history(price_history_file_path) -> list:
     jj = []

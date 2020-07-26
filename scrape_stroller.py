@@ -1,6 +1,4 @@
 """Script that fetches price history for stroller and sends email if it changes."""
-import requests
-import json
 import os
 import mail
 import dotenv
