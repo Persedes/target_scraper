@@ -2,17 +2,18 @@ from email.mime.text import MIMEText
 import smtplib
 import os
 
+
 def send_via_smtp(sender, to, message):
-    server = smtplib.SMTP('smtp.gmail.com:587')
+    server = smtplib.SMTP("smtp.gmail.com:587")
     server.ehlo()
     server.starttls()
-    server.login(sender, os.environ['APP_PASSWORD'])
+    server.login(sender, os.environ["APP_PASSWORD"])
     server.sendmail(sender, to, message)
     server.quit()
 
 
 def create_message(sender, to, subject, message_text):
-  """Create a message for an email.
+    """Create a message for an email.
 
   Args:
     sender: Email address of the sender.
@@ -23,9 +24,8 @@ def create_message(sender, to, subject, message_text):
   Returns:
     An object containing a base64url encoded email object.
   """
-  message = MIMEText(message_text)
-  message['to'] = to
-  message['from'] = sender
-  message['subject'] = subject
-  return message.as_string()
-
+    message = MIMEText(message_text)
+    message["to"] = to
+    message["from"] = sender
+    message["subject"] = subject
+    return message.as_string()
