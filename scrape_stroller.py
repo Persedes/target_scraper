@@ -37,7 +37,7 @@ def main():
 
         # lastly dump the new price to file
         last_price.append(current_price[0])
-        with open(PRICE_HISTORY_FILE, "w") as f:
+        with open(PRICE_HISTORY_FILE_PATH, "w") as f:
             json.dump(last_price, f)
 
     # once a day send a "still alive memo"
