@@ -5,7 +5,7 @@ Scrape price for a target item and notify about changes
 
 Make sure you have [poetry](https://python-poetry.org/) and python(>=3.6.1) installed.
 
-```python 
+```bash 
 poetry install
 ```
 
@@ -19,7 +19,7 @@ TO=EMAIL_1, EMAIL_2, EMAIL_3, etc
 
 # Usage
 
-```python 
+```bash 
 # when using poetry 
 poetry run python scrape_stroller.py
 ```
